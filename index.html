@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGS Electrical Services UK Ltd - Professional Electrical Contractors in Hayes & West London</title>
+    <meta name="description" content="NAPIT Approved Electrical Contractor serving West London, Greater London, Berkshire & Surrey. 24/7 Emergency Service, 5⭐ Rated with 10+ years experience.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0f172a;
+            --secondary-blue: #1e293b;
+            --accent-blue: #3b82f6;
+            --gold: #f59e0b;
+            --light-gold: #fbbf24;
+            --white: #ffffff;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --dark-gray: #334155;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.1);
+            --shadow-xl: 0 25px 50px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+        }
+
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+
+        /* Header */
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .header.scrolled {
+            background: rgba(15, 23, 42, 0.98);
+            padding: 0.75rem 0;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.025em;
+        }
+
+        .logo::before {
+            content: "⚡";
+            margin-right: 8px;
+            font-size: 1.75rem;
+            color: var(--gold);
+            filter: drop-shadow(0 0 8px var(--gold));
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .call-btn {
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .call-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mobile-menu {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--primary-blue);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 2rem 0;
+            transform: translateY(-100%);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: block;
+            transform: translateY(0);
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .mobile-nav li {
+            margin: 1rem 0;
+        }
+
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)),
+                        url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center/cover no-repeat;
+            color: white;
+            padding: 140px 0 100px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: var(--gold);
+        }
+
+        /* Smart Quote Section */
+        .quote-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--light-gray), #e2e8f0);
+            position: relative;
+        }
+
+        .quote-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .quote-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .quote-step {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--light-gray), #f1f5f9);
+        }
+
+        .quote-step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .quote-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            background: var(--light-gray);
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-item:hover {
+            background: #e2e8f0;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold);
+        }
+
+        .quote-submit {
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            color: white;
+            padding: 1.25rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .quote-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--medium-gray);
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #f1f5f9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--gold);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--gold);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-item:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 250px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #f1f5f9;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-card::before {
+            content: "";
+            font-size: 4rem;
+            color: var(--gold);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .review-stars {
+            color: var(--gold);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer {
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: var(--primary-blue);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            height: fit-content;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--gold);
+            margin-top: 0.25rem;
+        }
+
+        .emergency-notice {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Chatbot */
+        .chatbot-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .chatbot-widget {
+            display: none;
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .chatbot-widget.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .message.bot {
+            background: var(--light-gray);
+            align-self: flex-start;
+        }
+
+        .message.user {
+            background: var(--gold);
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chatbot-input-container {
+            padding: 1rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .chatbot-send {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .chatbot-send:hover {
+            background: var(--light-gold);
+        }
+
+        .chatbot-trigger {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold), var(--light-gold));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-trigger:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Call Button */
+        .floating-call {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-call:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .quote-container {
+                padding: 2rem;
+                margin: 0 16px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid, .services-grid, .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .chatbot-widget {
+                width: calc(100vw - 40px);
+                right: 20px;
+                bottom: 100px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .floating-call {
+                left: 20px;
+                bottom: 20px;
+            }
+
+            .chatbot-container {
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .quote-container {
+                padding: 1.5rem;
+            }
+
+            .feature-card, .service-item, .review-card {
+                padding: 1.5rem;
+            }
+
+            .contact-info {
+                padding: 2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Scroll Progress */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--light-gold));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="logo">AGS Electrical</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quote">Get Quote</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:+441234567890" class="call-btn">📞 Call Now</a>
+            <button class="mobile-menu" id="mobileMenuBtn">☰</button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quote">Get Quote</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    ⚡ NAPIT Approved Contractor
+                </div>
+                <h1>Professional Electrical Services You Can Trust</h1>
+                <p class="subtitle">Expert electrical solutions for domestic, commercial, and industrial needs across West London and surrounding areas. Available 24/7 for emergencies.</p>
+                
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <span><strong>5.0</strong> (99+ Reviews)</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="tel:+441234567890" class="btn-primary">
+                        📞 Call Now - Free Quote
+                    </a>
+                    <a href="#quote" class="btn-secondary">Get Instant Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Why Choose AGS Electrical?</h2>
+                <p class="section-subtitle fade-in">Professional, reliable, and certified electrical services across West London</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">⚡</span>
+                    <h3>24/7 Emergency Service</h3>
+                    <p>Round-the-clock emergency electrical services. No job too big or small, we're here when you need us most.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🏆</span>
+                    <h3>NAPIT Approved</h3>
+                    <p>Fully qualified and government-approved electrical contractor with all necessary certifications and insurance.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🛡️</span>
+                    <h3>6-Year Warranty</h3>
+                    <p>All electrical work covered by comprehensive insurance-backed warranty for complete peace of mind.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">💰</span>
+                    <h3>Competitive Pricing</h3>
+                    <p>Transparent pricing with special rates for OAPs and disabled clients. Free quotes and consultations.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">👨‍🔧</span>
+                    <h3>Expert Technicians</h3>
+                    <p>Over 10 years of experience in domestic, commercial, and industrial electrical installations.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">📍</span>
+                    <h3>Local Coverage</h3>
+                    <p>Serving West London, Greater London, Berkshire, and Surrey with fast response times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Our Electrical Services</h2>
+                <p class="section-subtitle fade-in">Complete electrical solutions for all your domestic, commercial, and industrial needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item slide-in-left">
+                    <h4>🏠 Domestic Electrical</h4>
+                    <p>Complete & partial rewires, socket installations, lighting design, home alarm systems, and consumer unit upgrades.</p>
+                </div>
+                <div class="service-item slide-in-right">
+                    <h4>🏢 Commercial Electrical</h4>
+                    <p>Office electrical systems, emergency lighting, fire alarms, data cabling, and commercial maintenance contracts.</p>
+                </div>
+                <div class="service-item slide-in-left">
+                    <h4>🏭 Industrial Electrical</h4>
+                    <p>Heavy-duty electrical installations, industrial maintenance, safety systems, and compliance testing.</p>
+                </div>
+                <div class="service-item slide-in-right">
+                    <h4>🔍 Electrical Testing & Inspection</h4>
+                    <p>EICR safety reports, PAT testing, inspection & testing certifications, and comprehensive electrical surveys.</p>
+                </div>
+                <div class="service-item slide-in-left">
+                    <h4>🚨 24/7 Emergency Services</h4>
+                    <p>Emergency electrician available 24/7, urgent repairs, power restoration, and emergency call-outs.</p>
+                </div>
+                <div class="service-item slide-in-right">
+                    <h4>📹 Security & CCTV Systems</h4>
+                    <p>CCTV installations, home alarm systems, security lighting, and access control systems.</p>
+                </div>
+                <div class="service-item slide-in-left">
+                    <h4>🔧 Electrical Repairs & Upgrades</h4>
+                    <p>Fuse box upgrades, electrical fault finding, system improvements, and modernization projects.</p>
+                </div>
+                <div class="service-item slide-in-right">
+                    <h4>📋 Landlord Electrical Services</h4>
+                    <p>Landlord safety certificates, compliance testing, rental property inspections, and EICR reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Quote Section -->
+    <section class="quote-section" id="quote">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Get Your Free Quote</h2>
+                <p class="section-subtitle fade-in">Quick form - get your estimate in minutes</p>
+            </div>
+
+            <div class="quote-container fade-in">
+                <form class="quote-form" id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Name *</label>
+                            <input type="text" class="form-input" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone *</label>
+                            <input type="tel" class="form-input" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Service Needed *</label>
+                            <select class="form-select" name="service" required>
+                                <option value="">Select main service</option>
+                                <option value="rewiring">Complete/Partial Rewiring</option>
+                                <option value="fuse-box">Fuse Box Upgrade</option>
+                                <option value="sockets">Additional Sockets</option>
+                                <option value="lighting">Lighting Installation</option>
+                                <option value="testing">Electrical Testing (EICR)</option>
+                                <option value="emergency">Emergency Repair</option>
+                                <option value="security">Security Systems</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Property Type *</label>
+                            <select class="form-select" name="propertyType" required>
+                                <option value="">Select type</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="industrial">Industrial</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Project Details</label>
+                        <textarea class="form-textarea" name="details" placeholder="Brief description of your electrical needs..." style="min-height: 80px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="quote-submit">
+                        🔧 Get My Free Quote Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Our Professional Work</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">See examples of our high-quality electrical installations and repairs</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Modern Consumer Unit Installation">
+                    <div class="gallery-overlay">
+                        <h4>Consumer Unit Upgrade</h4>
+                        <p>Modern safety standards compliance</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="Commercial Office Wiring">
+                    <div class="gallery-overlay">
+                        <h4>Commercial Installation</h4>
+                        <p>Complete office electrical system</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Gemini_Generated_Image_amvot6amvot6amvo.jpeg" alt="Complete Home Rewiring Project">
+                    <div class="gallery-overlay">
+                        <h4>Complete Rewiring</h4>
+                        <p>Full domestic electrical overhaul</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Gemini_Generated_Image_f98lwcf98lwcf98l.jpeg" alt="Emergency Electrical Repair">
+                    <div class="gallery-overlay">
+                        <h4>Emergency Repairs</h4>
+                        <p>24/7 fault finding and restoration</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Security System Installation">
+                    <div class="gallery-overlay">
+                        <h4>Security Systems</h4>
+                        <p>CCTV and alarm installations</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/Gemini_Generated_Image_suzyiisuzyiisuzy.jpeg" alt="Industrial Electrical Work">
+                    <div class="gallery-overlay">
+                        <h4>Industrial Projects</h4>
+                        <p>Heavy-duty electrical solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">What Our Customers Say</h2>
+                <p class="section-subtitle fade-in">5-star rated service with 99+ genuine customer reviews</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"AGS Electrical Services recently did work for me, they were extremely efficient, turned up on time, did their best not to inconvenience us and tidied up after themselves. Their work was excellent, we are very happy with them and highly recommend them. Their prices are very good."</p>
+                    <div class="reviewer">- Anne D., Hayes</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Ash was extremely helpful and knowledgeable. Did a great job and kept me fully informed throughout. Would gladly recommend him and definitely use his services again. Outstanding service from start to finish."</p>
+                    <div class="reviewer">- Richard B., West London</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Great service from Ash. Needed him to come fix a job urgently and he came and got it sorted promptly. Would definitely use again. Very professional and reliable electrician."</p>
+                    <div class="reviewer">- Sandeep S., Berkshire</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Excellent service and work. Ash and his team did a great job. Excellent workmanship, very polite and tidy. Nothing's too much trouble - Ash explained everything clearly and professionally."</p>
+                    <div class="reviewer">- Brenda B., Surrey</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Best first time service experience that I've had. Ash was exceptional! Professional, personable and efficient. Kept me informed of my options and resolved the situation quickly. Will definitely use again!"</p>
+                    <div class="reviewer">- Abhishek G., Greater London</div>
+                </div>
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Fantastic electrical work completed to the highest standard. The team was punctual, professional, and left everything spotless. Couldn't ask for better service from such skilled electricians!"</p>
+                    <div class="reviewer">- Sarah M., Hayes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Get In Touch Today</h2>
+                <p class="section-subtitle fade-in">Contact us for your free consultation and detailed quote</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info slide-in-left">
+                    <h3 style="margin-bottom: 2rem;">Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div>
+                            <strong>Service Address:</strong><br>
+                            18 Hewens Road<br>
+                            Hayes, UB4 8JR
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <div>
+                            <strong>Phone & Emergency Line:</strong><br>
+                            <a href="tel:+441234567890" style="color: var(--gold); text-decoration: none;">Call for Immediate Quote</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">🕒</div>
+                        <div>
+                            <strong>Business Hours:</strong><br>
+                            Monday - Thursday: 8:00 - 22:00<br>
+                            Friday - Sunday: 9:00 - 22:00<br>
+                            <em style="color: var(--gold);">24/7 Emergency Service</em>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">💳</div>
+                        <div>
+                            <strong>Payment Methods:</strong><br>
+                            BACS Transfer, Cash<br>
+                            <em>Flexible payment options available</em>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-in-right">
+                    <h3 style="margin-bottom: 2rem; color: var(--primary-blue);">Service Coverage Areas</h3>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1rem; background: white; border-radius: 12px; border-left: 4px solid var(--gold); box-shadow: var(--shadow-sm);">
+                            <strong>🏙️ West London</strong><br>
+                            <small style="color: var(--medium-gray);">Hayes, Ealing, Uxbridge, Hillingdon</small>
+                        </div>
+                        <div style="padding: 1rem; background: white; border-radius: 12px; border-left: 4px solid var(--gold); box-shadow: var(--shadow-sm);">
+                            <strong>🌆 Greater London</strong><br>
+                            <small style="color: var(--medium-gray);">All London boroughs covered</small>
+                        </div>
+                        <div style="padding: 1rem; background: white; border-radius: 12px; border-left: 4px solid var(--gold); box-shadow: var(--shadow-sm);">
+                            <strong>🏞️ Berkshire</strong><br>
+                            <small style="color: var(--medium-gray);">Reading, Windsor, Slough areas</small>
+                        </div>
+                        <div style="padding: 1rem; background: white; border-radius: 12px; border-left: 4px solid var(--gold); box-shadow: var(--shadow-sm);">
+                            <strong>🌳 Surrey</strong><br>
+                            <small style="color: var(--medium-gray);">Guildford, Woking, Epsom areas</small>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 16px; box-shadow: var(--shadow-md);">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">Our Certifications</h4>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.9rem;">
+                            <div>✅ NAPIT Approved</div>
+                            <div>✅ Part P Registered</div>
+                            <div>✅ TrustMark Listed</div>
+                            <div>✅ Gas Safe Registered</div>
+                            <div>✅ Fully Insured</div>
+                            <div>✅ City & Guilds Qualified</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="emergency-notice fade-in">
+                <h3>🚨 24/7 EMERGENCY ELECTRICAL SERVICE 🚨</h3>
+                <p style="margin: 1rem 0; font-size: 1.1rem;">Electrical emergencies can't wait - neither should you!</p>
+                <a href="tel:+441234567890" class="btn-primary" style="display: inline-block; margin-top: 1rem;">
+                    📞 Call Emergency Hotline Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--primary-blue); color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <div style="margin-bottom: 2rem;">
+                <div class="logo" style="justify-content: center; font-size: 1.75rem; margin-bottom: 1rem;">AGS Electrical Services UK Ltd</div>
+                <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">
+                    Professional electrical contractors serving West London and surrounding areas. 
+                    NAPIT approved, fully insured, and available 24/7 for emergencies.
+                </p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; opacity: 0.7;">
+                <p>&copy; 2025 AGS Electrical Services UK Ltd. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">NAPIT Approved • TrustMark Registered • Part P Certified • Gas Safe Registered</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <button class="floating-call" onclick="window.location.href='tel:+441234567890'" title="Call Now - Emergency Line">
+        📞
+    </button>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-widget" id="chatbotWidget">
+            <div class="chatbot-header">
+                <div>
+                    <strong>AGS Assistant</strong>
+                    <div style="font-size: 0.8rem; opacity: 0.8;">Ask me anything!</div>
+                </div>
+                <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    Hello! I'm here to help with all your electrical needs. I can provide information about our services, give quotes, book appointments, and answer questions about AGS Electrical Services. How can I assist you today?
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+                <button class="chatbot-send" onclick="sendChatMessage()">Send</button>
+            </div>
+        </div>
+        <button class="chatbot-trigger" onclick="toggleChatbot()" title="Chat with us">
+            💬
+        </button>
+    </div>
+
+    <script>
+        // Mobile menu functionality
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileNav').classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollProgress = document.getElementById('scrollProgress');
+            
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Update scroll progress
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Quote form handling
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const services = [];
+            formData.getAll('services[]').forEach(service => services.push(service));
+            
+            // Simulate quote processing
+            const submitBtn = this.querySelector('.quote-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Processing Quote...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you! Your quote request has been submitted. We will contact you within 2 hours with your detailed quote.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+            }, 2000);
+        });
+
+        // Chatbot functionality
+        let chatbotOpen = false;
+
+        function toggleChatbot() {
+            const widget = document.getElementById('chatbotWidget');
+            chatbotOpen = !chatbotOpen;
+            
+            if (chatbotOpen) {
+                widget.classList.add('active');
+                document.getElementById('chatbotInput').focus();
+            } else {
+                widget.classList.remove('active');
+            }
+        }
+
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chatbotInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            const messagesContainer = document.getElementById('chatbotMessages');
+            
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.textContent = message;
+            messagesContainer.appendChild(userMessage);
+            
+            input.value = '';
+            
+            // Simulate bot response
+            setTimeout(() => {
+                const botResponse = generateBotResponse(message.toLowerCase());
+                const botMessage = document.createElement('div');
+                botMessage.className = 'message bot';
+                botMessage.textContent = botResponse;
+                messagesContainer.appendChild(botMessage);
+                
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 1000);
+            
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function generateBotResponse(message) {
+            // Comprehensive business knowledge base
+            const responses = {
+                // Services and pricing
+                'price': 'Our prices are competitive and transparent. We offer free quotes for all work. Call us at the number above for an instant quote, or use our smart quote form. We also provide special rates for OAPs and disabled clients.',
+                'cost': 'Our prices are competitive and transparent. We offer free quotes for all work. Call us at the number above for an instant quote, or use our smart quote form. We also provide special rates for OAPs and disabled clients.',
+                'rewiring': 'We offer complete and partial rewiring services. Full house rewiring typically takes 3-7 days depending on property size. All work comes with a 6-year insurance-backed warranty. Would you like a free quote?',
+                'fuse box': 'We specialize in consumer unit (fuse box) upgrades to modern safety standards. This typically takes 4-6 hours and includes full testing and certification. All work is Part P compliant.',
+                'emergency': 'We provide 24/7 emergency electrical services across West London, Greater London, Berkshire, and Surrey. Call our emergency line now for immediate assistance!',
+                'testing': 'We provide EICR (Electrical Installation Condition Reports) for landlords and homeowners. These are required every 5 years for rental properties. We also offer PAT testing and full electrical surveys.',
+                
+                // Location and coverage
+                'area': 'We cover West London, Greater London, Berkshire, and Surrey. Our main service address is 18 Hewens Road, Hayes, UB4 8JR. We typically respond within 2 hours for emergency calls.',
+                'location': 'We cover West London, Greater London, Berkshire, and Surrey. Our main service address is 18 Hewens Road, Hayes, UB4 8JR. We typically respond within 2 hours for emergency calls.',
+                
+                // Credentials and certifications
+                'qualified': 'Yes, we are fully qualified and certified. We are NAPIT approved, Part P registered, TrustMark listed, Gas Safe registered, and fully insured. All our technicians hold City & Guilds qualifications.',
+                'insurance': 'We are fully insured and all our work comes with a 6-year insurance-backed warranty. We are also TrustMark registered, which is a government-endorsed scheme.',
+                'napit': 'Yes, we are NAPIT approved contractors. NAPIT is the National Association of Professional Inspectors & Testers. This means we can self-certify our electrical work and issue official certificates.',
+                
+                // Reviews and reputation
+                'reviews': 'We have a 5.0-star rating with 99+ customer reviews. You can see some of our recent reviews on this website. We pride ourselves on excellent customer service and quality workmanship.',
+                'rating': 'We have a 5.0-star rating with 99+ customer reviews. You can see some of our recent reviews on this website. We pride ourselves on excellent customer service and quality workmanship.',
+                
+                // Contact and booking
+                'appointment': 'To book an appointment, you can call us directly, use our smart quote form on this page, or continue chatting with me and I can help arrange a consultation.',
+                'book': 'To book an appointment, you can call us directly, use our smart quote form on this page, or continue chatting with me and I can help arrange a consultation.',
+                'contact': 'You can contact us by phone for immediate response, or use the quote form on this page. We are available Monday-Thursday 8:00-22:00, Friday-Sunday 9:00-22:00, with 24/7 emergency service.',
+                
+                // Payment and warranty
+                'payment': 'We accept BACS transfers and cash payments. We offer flexible payment options and provide detailed invoices for all work completed.',
+                'warranty': 'All our electrical work comes with a comprehensive 6-year insurance-backed warranty. This gives you complete peace of mind and protection for your investment.',
+                
+                // Google/Maps integration
+                'directions': 'We are located at 18 Hewens Road, Hayes, UB4 8JR. You can find directions on Google Maps by searching for "AGS Electrical Services UK Ltd" or use the address directly.',
+                'map': 'We are located at 18 Hewens Road, Hayes, UB4 8JR. You can find us on Google Maps by searching for "AGS Electrical Services UK Ltd".',
+                'google': 'You can find us on Google Maps and Google My Business by searching for "AGS Electrical Services UK Ltd". We maintain high ratings across all platforms.',
+                
+                // Default responses
+                'hello': 'Hello! I can help you with information about our electrical services, provide quotes, answer questions about our certifications, or help you book an appointment. What would you like to know?',
+                'help': 'I can assist you with: ✅ Service information and pricing ✅ Booking appointments ✅ Emergency electrical issues ✅ Certification questions ✅ Area coverage ✅ Getting quotes. What interests you most?'
+            };
+            
+            // Find matching response
+            for (const [key, response] of Object.entries(responses)) {
+                if (message.includes(key)) {
+                    return response;
+                }
+            }
+            
+            // Default response with helpful options
+            return "I'd be happy to help! I can provide information about our electrical services, pricing, certifications, coverage areas, or help you get a quote. You can also call us directly for immediate assistance. What specific information do you need?";
+        }
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Trigger initial animations
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight) {
+                        el.classList.add('visible');
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
